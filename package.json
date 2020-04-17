@@ -6,6 +6,7 @@
     "release": "npm run update-version && npm run zip",
     "start": "sirv distribution",
     "test": "xo && npm run build",
+    "test:eslint": "npx eslint src/*.svelte --ext svelte",
     "update-version": "VERSION=$(utc-version); echo $VERSION; dot-json distribution/manifest.json version $VERSION",
     "watch": "rollup -c -w",
     "zip": "web-ext build --source-dir distribution"
@@ -48,6 +49,7 @@
     "@rollup/plugin-commonjs": "^11.1.0",
     "@rollup/plugin-node-resolve": "^7.1.3",
     "dot-json": "^1.2.0",
+    "eslint": "^6.8.0",
     "eslint-plugin-svelte3": "^2.7.3",
     "rollup": "^2.6.1",
     "rollup-plugin-livereload": "^1.2.0",
